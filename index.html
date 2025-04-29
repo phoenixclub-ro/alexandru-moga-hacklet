@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dark Mode Toggle Bookmarklet Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dark Mode Toggle Bookmarklet</h1>
+        <p>
+            Instantly toggle dark mode on any webpage with this handy bookmarklet!
+        </p>
+        <h2>How to Add the Bookmarklet</h2>
+        <ol>
+            <li>
+                <strong>Drag this button to your bookmarks bar:</strong><br>
+                <a class="bookmarklet"
+                   href="javascript:(function(){if(document.documentElement.style.filter === 'invert(1) hue-rotate(180deg)'){document.documentElement.style.filter = '';}else{document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';}})();"
+                   title="Drag me to your bookmarks bar!">
+                    Dark Mode Toggle
+                </a>
+            </li>
+            <li>
+                <strong>Or:</strong> Click the button below for instructions on how to add the bookmarklet manually.
+            </li>
+        </ol>
+        <button class="instruction-btn" onclick="showInstructions()">How do I add this?</button>
+        <div id="instructions" class="instructions" style="display:none;">
+            <h3>Manual Bookmarklet Installation</h3>
+            <ol>
+                <li>Right-click your bookmarks bar and choose <strong>‘Add page’</strong> or <strong>‘Add bookmark’</strong>.</li>
+                <li>Give it a name (e.g., <strong>Dark Mode Toggle</strong>).</li>
+                <li>Copy and paste the code below into the URL/location field:</li>
+                <textarea readonly onclick="this.select()"
+                >javascript:(function(){if(document.documentElement.style.filter === 'invert(1) hue-rotate(180deg)'){document.documentElement.style.filter = '';}else{document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';}})();</textarea>
+                <li>Save the bookmark.</li>
+                <li>Click the bookmarklet on any page to toggle dark mode!</li>
+            </ol>
+        </div>
+        <h2>What it Does</h2>
+        <ul>
+            <li>Inverts all colors on the page for a dark mode effect</li>
+            <li>Works on most websites</li>
+            <li>Click again to turn dark mode off</li>
+        </ul>
+        <footer>
+            <p>Made by [Alexandru Moga] &middot; <a href="https://hacklet.hackclub.com/" target="_blank">Learn more about bookmarklets</a></p>
+        </footer>
+    </div>
+    <script>
+        function showInstructions() {
+            document.getElementById('instructions').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
